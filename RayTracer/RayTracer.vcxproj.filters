@@ -20,13 +20,28 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\include\vec3.h">
+    <ClInclude Include="src\include\Vec3.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\include\ray.h">
+    <ClInclude Include="src\include\Ray.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="src\include\color.h">
+    <ClInclude Include="src\include\Color.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hittable.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\sphere.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hittable_list.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\rtweekend.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\include\Camera.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>
