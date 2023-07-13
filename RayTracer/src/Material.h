@@ -52,9 +52,9 @@ public:
     double fuzz;
 };
 
-class dielectric : public Material {
+class Dielectric : public Material {
 public:
-    dielectric(double index_of_refraction) : ir(index_of_refraction) {}
+    Dielectric(double index_of_refraction) : ir(index_of_refraction) {}
 
     virtual bool scatter(
         const Ray& r_in, const Hit_record& rec, Color& attenuation, Ray& scattered
