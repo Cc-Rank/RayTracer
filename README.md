@@ -8,13 +8,13 @@
 
 此外，封面图中所有的小球均是随机生成的，因此网上所有人得到的结果图均是不同的。
 
-![Spheres](Notes/Assets/One_Weekend.png "Spheres")
+![Spheres](./Notes/Assets/One_Weekend.png "Spheres")
 
 第一部分中值得记录的知识点有：
 
-- [Ray Casting](Notes/Ray_Casting.md)
-- [Ray-Sphere Intersection](Notes/Intersection.md)
-- [Diffuse Reflection](Notes/Diffuse_Reflection.md)
-- [Specular Reflection](Notes/Specular_Reflection.md)
-- [Refraction & Fresnel term](Notes/Refraction_Fresnel.md)
-- [Depth of Field](Notes/Defocus_Blur.md)
+- [Ray Casting](./Notes/Ray_Casting.md)
+- [Ray-Sphere Intersection](./Notes/Intersection.md)
+- [Diffuse Reflection](./Notes/Diffuse_Reflection.md)
+- [Specular Reflection](./Notes/Specular_Reflection.md)
+- [Refraction & Fresnel term](./Notes/Refraction_Fresnel.md)
+- [Depth of Field](./Notes/Defocus_Blur.md)
