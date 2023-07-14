@@ -71,7 +71,7 @@ $$
 $$
 \begin{equation}
 \begin{aligned}
-R^{\prime}_{\parallel} = - \sqrt{1 - \left|R_{\perp}^{\prime} \right|^2} \cdot n
+R_{\parallel}^{\prime} = - \sqrt{1 - \left|R_{\perp}^{\prime} \right|^2} \cdot n
 \end{aligned}
 \end{equation}
 $$
