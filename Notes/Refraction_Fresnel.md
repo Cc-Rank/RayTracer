@@ -16,9 +16,7 @@ $$
 
 $$
 \begin{equation}
-\begin{aligned}
-R^\prime = R^{\prime}_\perp + R^{\prime}_\parallel
-\end{aligned}
+R^{\prime} = R^{\prime}_{\perp} + R^{\prime}_{\parallel}
 \end{equation}
 $$
 
