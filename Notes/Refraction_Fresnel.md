@@ -15,9 +15,9 @@ $$
 以入射和折射方向均“朝外”，且均为单位向量为例。在折射介质部分有一条折射光线 $R^\prime$ 和一个法向量 $n^\prime$ ，其夹角为 $\theta^\prime$ 。我们可以将 $R^\prime$  分解成垂直和水平与法向量的两个分量：
 
 $$
-\begin{align}
+\begin{equation}
 R^\prime = R^{\prime}_\perp + R^{\prime}_\parallel
-\end{align}
+\end{equation}
 $$
 
 首先对于 $R^{\prime}_\perp$ ，其模长为：
@@ -58,11 +58,11 @@ $$
 
 $$
 \begin{equation}
-\begin{aligned}
+\begin{split}
 R^{\prime}_\perp &= |R^{\prime}_\perp| \cdot \frac{-R_\perp}{|R_\perp|}\\
                  &= \frac{\sin{\theta^\prime}}{\sin{\theta}} ((R \cdot n) \cdot n - R) \\
                  &= \frac{\eta}{\eta^\prime} (\cos{\theta} \cdot n - R)
-\end{aligned}
+\end{split}
 \end{equation}
 $$
 
@@ -70,7 +70,7 @@ $$
 
 $$
 \begin{equation}
-R^{\prime}_\parallel = -\sqrt{1 - |R^{\prime}_\perp|^2} \cdot n
+R^{\prime}_{\parallel} = - \sqrt{1 - \left|R^{\prime}_{\perp} \right|^2} \cdot n
 \end{equation}
 $$
 
