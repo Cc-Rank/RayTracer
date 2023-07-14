@@ -59,7 +59,7 @@ $$
 $$
 \begin{equation}
 \begin{split}
-R^{\prime}_\perp &= |R^{\prime}_\perp| \cdot \frac{-R_\perp}{|R_\perp|}\\
+R_{\perp}^{\prime} &= |R_{\perp}^{\prime}| \cdot \frac{-R_\perp}{|R_\perp|}\\
                  &= \frac{\sin{\theta^\prime}}{\sin{\theta}} ((R \cdot n) \cdot n - R) \\
                  &= \frac{\eta}{\eta^\prime} (\cos{\theta} \cdot n - R)
 \end{split}
@@ -71,7 +71,7 @@ $$
 $$
 \begin{equation}
 \begin{aligned}
-R^{\prime}_{\parallel} = - \sqrt{1 - \left|R^{\prime}_{\perp} \right|^2} \cdot n
+R^{\prime}_{\parallel} = - \sqrt{1 - \left|R_{\perp}^{\prime} \right|^2} \cdot n
 \end{aligned}
 \end{equation}
 $$
