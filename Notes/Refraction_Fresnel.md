@@ -16,7 +16,9 @@ $$
 
 $$
 \begin{equation}
+\begin{aligned}
 R^\prime = R^{\prime}_\perp + R^{\prime}_\parallel
+\end{aligned}
 \end{equation}
 $$
 
@@ -70,7 +72,9 @@ $$
 
 $$
 \begin{equation}
+\begin{aligned}
 R^{\prime}_{\parallel} = - \sqrt{1 - \left|R^{\prime}_{\perp} \right|^2} \cdot n
+\end{aligned}
 \end{equation}
 $$
 
