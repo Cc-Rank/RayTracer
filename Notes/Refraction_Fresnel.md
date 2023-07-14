@@ -16,7 +16,7 @@ $$
 
 $$
 \begin{equation}
-R^{\prime} = R^{\prime}_{\perp} + R^{\prime}_{\parallel}
+R^{\prime} = R_{\perp}^{\prime} + R^{\prime}_{\parallel}
 \end{equation}
 $$
 
@@ -28,7 +28,7 @@ $$
 \end{equation}
 $$
 
-$R^{\prime}_\perp$ 的方向也就是水平方向，可以用入射向量 $R$ 和法线向量 $n$ 求出。设 $R$ 在垂直于 $n$ 的分量为 $R_\perp$ ，平行于法线向量的 $R_\parallel$ ：
+$R_{\perp}^{\prime}$ 的方向也就是水平方向，可以用入射向量 $R$ 和法线向量 $n$ 求出。设 $R$ 在垂直于 $n$ 的分量为 $R_\perp$ ，平行于法线向量的 $R_\parallel$ ：
 
 $$
 \begin{equation}
