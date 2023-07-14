@@ -143,8 +143,10 @@ float fresnel(const Vector3f &I, const Vector3f &N, const float &ior)
 当然对于上述又大又丑的方程，很少有人会愿意直接使用它来计算。更多的选择是使用 Christophe Schlick 的多项式近似：
 
 $$
-R_0 = \left(\frac{n_1 - n_2}{n_1 + n_2} \right)^2 \\
-R(\theta) = R_0 + (1 - R_0)(1 - \cos{\theta})^5
+\begin{aligned}
+R_0 &= \left(\frac{n_1 - n_2}{n_1 + n_2} \right)^2 \\
+R(\theta) &= R_0 + (1 - R_0)(1 - \cos{\theta})^5
+\end{aligned}
 $$
 
 ```cpp
