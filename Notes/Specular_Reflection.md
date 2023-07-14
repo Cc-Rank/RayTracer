@@ -65,6 +65,10 @@ class metal : public material {
 };
 ```
 
+相比于之前闪亮的金属，Fuzz 后的效果是另一种金属的呈现形式。
+
+<div align="center"><img src="Assets/Shiny_Metal.png" width = "45%" > <img src="Assets/Fuzzed_Metal.png" width = "45%" ></div>
+
 ## The End
 
 [返回主页](../README.md)

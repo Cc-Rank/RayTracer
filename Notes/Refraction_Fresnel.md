@@ -15,44 +15,63 @@ $$
 以入射和折射方向均“朝外”，且均为单位向量为例。在折射介质部分有一条折射光线 $R^\prime$ 和一个法向量 $n^\prime$ ，其夹角为 $\theta^\prime$ 。我们可以将 $R^\prime$  分解成垂直和水平与法向量的两个分量：
 
 $$
-R^\prime = R^{\prime}_\perp + R^{\prime}_\parallel \tag{1}
+\begin{align}
+R^\prime = R^{\prime}_\perp + R^{\prime}_\parallel
+\end{align}
 $$
 
 首先对于 $R^{\prime}_\perp$ ，其模长为：
 
 $$
-|R^{\prime}_\perp| = \sin{\theta^\prime} \cdot |R^\prime| = \sin{\theta^\prime} \tag{2}
+\begin{equation}
+|R^{\prime}_\perp| = \sin{\theta^\prime} \cdot |R^\prime| = \sin{\theta^\prime}
+\end{equation}
 $$
 
 $R^{\prime}_\perp$ 的方向也就是水平方向，可以用入射向量 $R$ 和法线向量 $n$ 求出。设 $R$ 在垂直于 $n$ 的分量为 $R_\perp$ ，平行于法线向量的 $R_\parallel$ ：
 
 $$
+\begin{equation}
 \begin{aligned}
-R_\parallel &= \cos{\theta} \cdot n \\
-            &= (R \cdot n) \cdot n\\
-R_\perp     &= R - R_\parallel \\
-            &= R - (R \cdot n) \cdot n  \tag{3} \\
+R_\parallel &= \cos{\theta} \cdot n\\
+            &= (R \cdot n) \cdot n
 \end{aligned}
+\end{equation}
 $$
 
 $$
-|R_\perp| = \sin{\theta} \tag{4}
+\begin{equation}
+\begin{aligned}
+R_\perp     &= R - R_\parallel \\
+            &= R - (R \cdot n) \cdot n \\
+\end{aligned}
+\end{equation}
 $$
 
-结合(2)(3)(4)式有：
+$$
+\begin{equation}
+|R_\perp| = \sin{\theta}
+\end{equation}
+$$
+
+结合(2)(4)(5)式有：
 
 $$
+\begin{equation}
 \begin{aligned}
 R^{\prime}_\perp &= |R^{\prime}_\perp| \cdot \frac{-R_\perp}{|R_\perp|}\\
                  &= \frac{\sin{\theta^\prime}}{\sin{\theta}} ((R \cdot n) \cdot n - R) \\
-                 &= \frac{\eta}{\eta^\prime} (\cos{\theta} \cdot n - R) \tag{5}
+                 &= \frac{\eta}{\eta^\prime} (\cos{\theta} \cdot n - R)
 \end{aligned}
+\end{equation}
 $$
 
-再由(1)(5)式有：
+再由(1)(6)式有：
 
 $$
-R^{\prime}_\parallel = -\sqrt{1 - |R^{\prime}_\perp|^2} \cdot n \tag{6}
+\begin{equation}
+R^{\prime}_\parallel = -\sqrt{1 - |R^{\prime}_\perp|^2} \cdot n
+\end{equation}
 $$
 
 根据上述公式, 我们就能写出计算折射光线 $R^\prime$ 的函数（代码中 $R$ 方向与推导相反）：
@@ -74,11 +93,15 @@ vec3 refract(const vec3& uv, const vec3& n, double etai_over_etat) {
 
 $$
 R_s = \left|\frac{n_1 \cos{\theta_i} - n_2 \cos{\theta_t}}{n_1 \cos{\theta_i} + n_2 \cos{\theta_t}} \right|^2
-= \left| \frac{n_1 \cos{\theta_i} - n_2 \sqrt{1 - (\frac{n_1}{n_2} \sin{\theta_i})^2}}{n_1 \cos{\theta_i} + n_2 \sqrt{1 - (\frac{n_1}{n_2} \sin{\theta_i})^2}} \right|^2 \\
+= \left| \frac{n_1 \cos{\theta_i} - n_2 \sqrt{1 - (\frac{n_1}{n_2} \sin{\theta_i})^2}}{n_1 \cos{\theta_i} + n_2 \sqrt{1 - (\frac{n_1}{n_2} \sin{\theta_i})^2}} \right|^2
+$$
 
+$$
 R_p = \left|\frac{n_1 \cos{\theta_t} - n_2 \cos{\theta_i}}{n_1 \cos{\theta_t} + n_2 \cos{\theta_i}} \right|^2
-= \left| \frac{n_1 \sqrt{1 - (\frac{n_1}{n_2} \sin{\theta_i})^2} - n_2 \cos{\theta_i}}{n_1 \sqrt{1 - (\frac{n_1}{n_2} \sin{\theta_i})^2} + n_2 \cos{\theta_i}} \right|^2 \\
+= \left| \frac{n_1 \sqrt{1 - (\frac{n_1}{n_2} \sin{\theta_i})^2} - n_2 \cos{\theta_i}}{n_1 \sqrt{1 - (\frac{n_1}{n_2} \sin{\theta_i})^2} + n_2 \cos{\theta_i}} \right|^2
+$$
 
+$$
 R_{eff} = \frac{1}{2} (R_s + R_p)
 $$
 
