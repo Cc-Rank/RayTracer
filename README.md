@@ -18,3 +18,5 @@
 - [Specular Reflection](./Notes/Specular_Reflection.md)
 - [Refraction & Fresnel term](./Notes/Refraction_Fresnel.md)
 - [Depth of Field](./Notes/Defocus_Blur.md)
+
+## The Next Week
