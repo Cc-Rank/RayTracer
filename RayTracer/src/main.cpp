@@ -5,6 +5,8 @@
 #include "Sphere.h"
 #include "Camera.h"
 #include "material.h"
+#include "MoveingSphere.h"
+#include "BVH.h"
 
 #include <iostream>
 
@@ -46,7 +48,9 @@ Hittable_list random_scene() {
                     // diffuse
                     auto albedo = Color::random() * Color::random();
                     sphere_material = make_shared<Lambertian>(albedo);
-                    world.add(make_shared<Sphere>(center, 0.2, sphere_material));
+                    auto center2 = center + Vec3(0, random_double(0, .5), 0);
+                    world.add(make_shared<moving_sphere>(
+                        center, center2, 0.0, 1.0, 0.2, sphere_material));
                 }
                 else if (choose_mat < 0.95) {
                     // metal
@@ -73,18 +77,18 @@ Hittable_list random_scene() {
     auto material3 = make_shared<Metal>(Color(0.7, 0.6, 0.5), 0.0);
     world.add(make_shared<Sphere>(Point3(4, 1, 0), 1.0, material3));
 
-    return world;
+    return Hittable_list(make_shared<bvh_node>(world, 0.0, 1.0));
 }
 
 
 int main() {
 
     // Image
-    const auto aspect_ratio = 3.0 / 2.0;
-    const int image_width = 1200;
+    auto aspect_ratio = 16.0 / 9.0;
+    int image_width = 400;
     const int image_height = static_cast<int>(image_width / aspect_ratio);
-    const int samples_per_pixel = 500;
-    const int max_depth = 50;
+    int samples_per_pixel = 100;
+    int max_depth = 50;
 
     // World
     auto world = random_scene();
@@ -96,7 +100,7 @@ int main() {
     auto dist_to_focus = 10.0;
     auto aperture = 0.1;
 
-    Camera cam(lookfrom, lookat, vup, 20, aspect_ratio, aperture, dist_to_focus);
+    Camera cam(lookfrom, lookat, vup, 20, aspect_ratio, aperture, dist_to_focus, 0.0, 1.0);
 
     // Render
     std::cout << "P3\n" << image_width << ' ' << image_height << "\n255\n";
