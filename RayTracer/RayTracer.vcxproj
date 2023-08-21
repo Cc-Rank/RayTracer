@@ -158,13 +158,16 @@
     <ClCompile Include="src\main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\BVH.h" />
     <ClInclude Include="src\Hittable_list.h" />
+    <ClInclude Include="src\include\AABB.h" />
     <ClInclude Include="src\include\Camera.h" />
     <ClInclude Include="src\include\Color.h" />
     <ClInclude Include="src\Hittable.h" />
     <ClInclude Include="src\include\Ray.h" />
     <ClInclude Include="src\include\rtweekend.h" />
     <ClInclude Include="src\Material.h" />
+    <ClInclude Include="src\MoveingSphere.h" />
     <ClInclude Include="src\Sphere.h" />
     <ClInclude Include="src\include\Vec3.h" />
   </ItemGroup>

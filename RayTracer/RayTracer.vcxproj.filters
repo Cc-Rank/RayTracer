@@ -47,5 +47,14 @@
     <ClInclude Include="src\Material.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="src\include\AABB.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MoveingSphere.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="src\BVH.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

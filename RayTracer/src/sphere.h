@@ -12,12 +12,20 @@ public:
 
     virtual bool hit(
         const Ray& r, double t_min, double t_max, Hit_record& rec) const override;
+    virtual bool bounding_box(double time0, double time1, AABB& output_box) const override;
 
 public:
     Point3 center;
     double radius;
     shared_ptr<Material> mat_ptr;
 };
+
+bool Sphere::bounding_box(double time0, double time1, AABB& output_box) const {
+    output_box = AABB(
+        center - Vec3(radius, radius, radius),
+        center + Vec3(radius, radius, radius));
+    return true;
+}
 
 bool Sphere::hit(const Ray& r, double t_min, double t_max, Hit_record& rec) const {
     Vec3 oc = r.origin() - center;
