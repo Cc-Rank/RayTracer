@@ -166,6 +166,7 @@
     <ClInclude Include="src\Hittable.h" />
     <ClInclude Include="src\include\Ray.h" />
     <ClInclude Include="src\include\rtweekend.h" />
+    <ClInclude Include="src\include\Texture.h" />
     <ClInclude Include="src\Material.h" />
     <ClInclude Include="src\MoveingSphere.h" />
     <ClInclude Include="src\Sphere.h" />
